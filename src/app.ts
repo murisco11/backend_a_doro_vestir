@@ -14,7 +14,7 @@ function createApp() {
     }))
 
     app.use(express.json())
-    app.use("/api", router)
+    app.use("/", router)
 
     mongoose.connect(mongo_url)
         .then(() => console.log("Server init"))

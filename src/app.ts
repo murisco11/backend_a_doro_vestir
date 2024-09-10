@@ -5,7 +5,7 @@ import mongoose from "mongoose"
 
 function createApp() {
     const mongo_url = String(process.env.MONGO_URL)
-    const origin = String(process.env.ORIGIN)
+    const origin = String(process.env.ORIGIN || '*')
     const app = express()
 
     app.use(cors({

@@ -2,10 +2,13 @@
   "name": "node-blue-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dist": "tsup src",
-    "start:dev": "tsx --env-file=.env src/server.ts",
+    "start": "tsx --env-file=.env src/server.ts",
     "start:watch": "tsx watch --env-file=.env  src/server.ts",
     "start:dist": "npm run dist && node dist/src/index.js"
   },

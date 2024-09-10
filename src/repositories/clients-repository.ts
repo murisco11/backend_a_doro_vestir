@@ -50,6 +50,7 @@ export const createClient = async (body: ClientModel) => {
             address: body.address,
             birthday: birthday,
             cpf: body.cpf,
+            identity: body.identity,
             balance: body.balance,
             telephone: body.telephone,
             status: body.status

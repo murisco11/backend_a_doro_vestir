@@ -5,6 +5,7 @@ export const clientSchema: Schema = new Schema({
     address: { type: String },
     birthday: { type: String},
     cpf: { type: Number },
+    identity: { type: String },
     balance: { type: Number},
     telephone: { type: Number},
     status: {type: Boolean}

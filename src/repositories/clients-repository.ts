@@ -8,13 +8,14 @@ export const clients_model = mongoose.model('clients', clientSchema)
 
 export const findAllClients = async () => {
     const clients = await clients_model.find({})
+    
     return clients
 }
 
 export const findClientById = async (body: string) => {
     const objectId = new mongoose.Types.ObjectId(body)
-
     const clients = await clients_model.find({ _id: objectId })
+    
     return clients
 }
 
@@ -72,6 +73,7 @@ export const deleteClient = async (id: string) => {
 export const updateClient = async (body: ClientModel, id: string) => {
     const objectId = new mongoose.Types.ObjectId(id)
     const client_new_body = body
+    
     const updated_client = clients_model.findByIdAndUpdate(objectId, client_new_body)
 
     return updated_client
@@ -86,8 +88,6 @@ export const raffleClients = async (raffle: RaffleModel) => {
     } else {
         clients = await clients_model.find({})
     }
-
-    console.log('clients:', clients)
 
     return clients
 }

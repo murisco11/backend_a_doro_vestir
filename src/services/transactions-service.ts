@@ -20,7 +20,6 @@ export const getTransactionByIdService = async (id: string) => {
 export const getTransactionsByClientIdService = async (id: string) => {
     let response = null
 
-    const body: string = id
     const transaction = await getTransactionsByClientIdRepository(id)
 
     if (transaction) {

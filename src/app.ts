@@ -17,7 +17,7 @@ function createApp() {
     app.use(router)
 
     mongoose.connect(mongo_url)
-        .then(() => console.log("Server init"))
+        .then(() => console.log("Connect DB"))
         .catch(err => console.error("Error in db:", err))
 
     return app

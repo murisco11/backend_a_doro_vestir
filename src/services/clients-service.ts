@@ -75,7 +75,6 @@ export const updateClientService = async (client: ClientModel, param: any) => {
 
     const id = String(param.id)
     const body: ClientModel = client
-    console.log(id)
     const updated_client = await updateClient(body, id)
 
     if (updated_client) {
